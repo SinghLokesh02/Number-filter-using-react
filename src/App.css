@@ -1,38 +1,89 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 2vh auto;
+}
+.first-heading {
   text-align: center;
+  color: red;
+  margin: 5px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-box {
+  width: 80%;
+  margin: 4vh auto;
+  min-width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading-array {
+  margin: 5px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#array {
+  border: 4px double rgb(3, 139, 3);
+  word-spacing: 20px;
+  padding: 10px;
+  font-weight: bolder;
+  color: red;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: justify;
+}
+
+.filter-btns {
+  width: 80%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  margin: 0px auto;
+  min-width: 300px;
+  margin-top: 0px 0px 2vh 0px;
+}
+/* Adding Responsiveness */
+@media only screen and (max-width: 695px) {
+  .filter-btns {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  #array {
+    font-size: 16px;
+  }
+  .heading-array {
+    font-size: 20px;
+  }
+}
+
+button {
+  border: none;
+  padding: 10px 7px;
+  border-radius: 5px;
+  background-color: red;
   color: white;
+  font-weight: bold;
+  margin: 5px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+button:nth-child(1) {
+  background-color: lime;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:nth-child(1):hover {
+  background-color: rgb(3, 148, 3);
+}
+button:nth-child(2) {
+  background-color: cyan;
+}
+button:nth-child(2):hover {
+  background-color: rgb(4, 172, 172);
+}
+button:nth-child(3):hover {
+  background-color: rgb(180, 4, 4);
+}
+button:nth-child(4) {
+  background-color: blue;
+}
+button:nth-child(4):hover {
+  background-color: rgb(5, 5, 160);
 }
